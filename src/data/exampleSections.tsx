@@ -45,10 +45,10 @@ import {
  * Sections configuration for the canvas.
  * This file uses React components instead of JSON for better type safety,
  * composition, and developer experience.
- * 
+ *
  * NOW WITH LAYOUT SYSTEM: Sections can be wrapped in layout components
  * to control how they are arranged on the page.
- * 
+ *
  * Vite will watch this file for changes and hot-reload automatically.
  */
 
@@ -65,27 +65,8 @@ const inlineEditingColors = {
 
 const exampleSections: ReactElement[] = [
     // ========================================
-    // INLINE EDITING DEMO (Test the editing feature)
+    // INLINE EDITING DEMO - EQUATIONS
     // ========================================
-    <FullWidthLayout key="inline-editing-header" maxWidth="xl">
-        <Section id="inline-editing-header">
-            <div className="mb-8">
-                <EditableText as="h2" sectionId="inline-editing-header" className="text-3xl font-bold mb-4">
-                    Inline Editing Demo
-                </EditableText>
-                <EditableText as="p" sectionId="inline-editing-header" className="text-muted-foreground mb-4">
-                    This section demonstrates the inline editing feature. Click the Edit button
-                    in the header to enable editing mode. Then you can click on text to edit it
-                    directly, or hover over equations to see the edit button.
-                </EditableText>
-                <EditableText as="p" sectionId="inline-editing-header" className="text-lg">
-                    Physics is the study of matter, energy, and the fundamental forces
-                    that govern the universe. Try editing this paragraph!
-                </EditableText>
-            </div>
-        </Section>
-    </FullWidthLayout>,
-
     <FullWidthLayout key="inline-editing-equations" maxWidth="xl">
         <Section id="inline-editing-equations">
             <EditableText as="h3" sectionId="inline-editing-equations" className="text-2xl font-bold mb-4">
@@ -123,6 +104,31 @@ const exampleSections: ReactElement[] = [
         </Section>
     </FullWidthLayout>,
 
+    // ========================================
+    // INLINE EDITING DEMO - HEADER
+    // ========================================
+    <FullWidthLayout key="inline-editing-header" maxWidth="xl">
+        <Section id="inline-editing-header">
+            <div className="mb-8">
+                <EditableText as="h2" sectionId="inline-editing-header" className="text-3xl font-bold mb-4">
+                    Inline Editing Demo
+                </EditableText>
+                <EditableText as="p" sectionId="inline-editing-header" className="text-muted-foreground mb-4">
+                    This section demonstrates the inline editing feature. Click the Edit button
+                    in the header to enable editing mode. Then you can click on text to edit it
+                    directly, or hover over equations to see the edit button.
+                </EditableText>
+                <EditableText as="p" sectionId="inline-editing-header" className="text-lg">
+                    Physics is the study of matter, energy, and the fundamental forces
+                    that govern the universe. Try editing this paragraph!
+                </EditableText>
+            </div>
+        </Section>
+    </FullWidthLayout>,
+
+    // ========================================
+    // INLINE EDITING DEMO - COLORED EQUATIONS
+    // ========================================
     <FullWidthLayout key="inline-editing-colored" maxWidth="xl">
         <ColoredEquationProvider colorMap={inlineEditingColors}>
             <Section id="inline-editing-colored">

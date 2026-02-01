@@ -85,4 +85,9 @@ export const sections: ReactElement[] = [
             <p>test</p>
         </Section>
     </FullWidthLayout>,
+    <FullWidthLayout key="section-1769970785699" maxWidth="xl">
+        <Section id="section-1769970785699">
+            <p>This is a paragraph with the editing features.</p>
+        </Section>
+    </FullWidthLayout>,
 ];

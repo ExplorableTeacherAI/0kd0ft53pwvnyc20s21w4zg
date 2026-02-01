@@ -1,6 +1,6 @@
 import { type ReactElement } from "react";
-// import { Section } from "@/components/templates";
-// import { FullWidthLayout, SplitLayout, GridLayout, SidebarLayout, Sidebar, Main } from "@/components/layouts";
+import { Section } from "@/components/templates";
+import { FullWidthLayout } from "@/components/layouts";
 
 // Initialize variables from this file's variable definitions
 import { useVariableStore } from "@/stores";
@@ -80,15 +80,9 @@ useVariableStore.getState().initialize(getDefaultValues());
  */
 
 export const sections: ReactElement[] = [
-    // Start adding your sections here!
-
-    // Example:
-    /*
-    <FullWidthLayout key="welcome" maxWidth="xl">
-        <Section id="welcome-message">
-            <h1 className="text-4xl font-bold">Welcome to MathVibe</h1>
-            <p className="mt-4 text-xl text-muted-foreground">Start building your interactive lesson.</p>
+    <FullWidthLayout key="section-1769970212837" maxWidth="xl">
+        <Section id="section-1769970212837">
+            <p>test</p>
         </Section>
-    </FullWidthLayout>
-    */
+    </FullWidthLayout>,
 ];
